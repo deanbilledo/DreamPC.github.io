@@ -58,13 +58,32 @@ body {
     font-size: 16px;
     color: wheat;
     padding: 20px 45px 20px 20px;
+    display: block;
 
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1; /* Start with full opacity */
+    }
+    to {
+        opacity: 0; /* Fade out to completely transparent */
+    }
 }
 
 .input-box input::placeholder {
 
     color: white;
+    transition: color 0.5s ease;
 
+}
+
+
+.input-box input:focus::placeholder {
+
+    color: transparent;
+    animation: fadeOut 0.5s ease forwards;
+    
 }
 
 .input-box i {
